@@ -1,29 +1,37 @@
-/* quick template for quit/continue program*/
-
+/*quick template for quit/continue program*/
 #include <stdio.h>
 
+bool quit(char c);
 
 int main()
 { 
-  int num,flag =0;
-  char ch;
+  int flag =0;
 
 do 
   {
-    printf("Enter num:");
-    scanf("%d", &num);
+	
+	/*your code here*/
 
-    printf("\n press 'q' to quit, 'y' to continue:");
-    scanf(" %c", &ch);
-
-    if(ch =='q')
-      flag = 1;
-    if(ch =='y')
-      flag = 0;
+   
+    
 
   
-  }while(flag==0);
+  }while(!quit());
    return 0;
 
 }
+
+quit(char c)
+{
+	printf("\n press 'q' to quit, 'y' to continue:");
+    scanf(" %c", &c);
+	
+	if(c =='q')
+		int  flag = true;
+    if(c =='y')
+		flag = false;
+  
+	return flag;
+}
+
 
